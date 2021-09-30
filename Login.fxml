@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane styleClass="mainFxmlClass" stylesheets="@../Style/login.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coffee.LoginController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="430.0" prefWidth="612.0">
+         <children>
+            <VBox prefHeight="430.0" prefWidth="301.0" style="-fx-background-color: yellow;">
+               <children>
+                  <ImageView fitHeight="517.0" fitWidth="738.0">
+                     <image>
+                        <Image url="@../../UI/Coffee%20Mocha%20Typography%20Wallpaper%20Mural.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="148.0" prefHeight="505.0" prefWidth="476.0">
+               <children>
+                  <AnchorPane prefHeight="255.0" prefWidth="476.0">
+                     <VBox.margin>
+                        <Insets bottom="30.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <AnchorPane>
+                     <VBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </VBox.margin>
+                     <children>
+                        <AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="202.0" prefWidth="415.0" style="-fx-background-color: Orange;">
+                           <cursor>
+                              <Cursor fx:constant="SW_RESIZE" />
+                           </cursor>
+                           <effect>
+                              <InnerShadow height="2.625" radius="0.15625" width="0.0" />
+                           </effect>
+                           <children>
+                              <ImageView fitHeight="202.0" fitWidth="415.0">
+                                 <image>
+                                    <Image url="@../../UI/BEHR%201%20qt_%20%23BCP43%20Tweed%20Coat%20Interior%20Chalk%20Decorative%20Paint.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView disable="true" fitHeight="113.0" fitWidth="116.0" layoutX="35.0" layoutY="69.0" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../UI/Cafe%20Hot%20Coffee%20Mug%20Coffee%20Classic%20Round%20Sticker.jpg" />
+                                 </image>
+                              </ImageView>
+                              <JFXButton fx:id="staffBtn" blendMode="SRC_ATOP" cache="true" cacheHint="SCALE" depthTest="DISABLE" layoutX="6.0" layoutY="18.0" onAction="#activeStaffForm" prefHeight="34.0" prefWidth="84.0" style="-fx-background-color: Brown;" styleClass="active" text="STAFF" textAlignment="JUSTIFY" textOverrun="CENTER_ELLIPSIS">
+                                 <cursor> 
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton fx:id="adminBtn" blendMode="SRC_ATOP" cache="true" cacheHint="SPEED" depthTest="ENABLE" layoutX="100.0" layoutY="18.0" onAction="#activeAdminForm" prefHeight="34.0" prefWidth="84.0" style="-fx-background-color: violet;" styleClass="inactive" text="ADMIN">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <PasswordField fx:id="passInput" layoutX="222.0" layoutY="79.0" prefHeight="25.0" prefWidth="160.0" promptText="Password" />
+                              <TextField fx:id="userInput" alignment="BOTTOM_LEFT" layoutX="222.0" layoutY="35.0" prefHeight="25.0" prefWidth="160.0" promptText="Username">
+                                 <cursor>
+                                    <Cursor fx:constant="V_RESIZE" />
+                                 </cursor>
+                                 <effect>
+                                    <Blend />
+                                 </effect>
+                              </TextField>
+                              <JFXButton fx:id="logInBtn" buttonType="RAISED" contentDisplay="CENTER" layoutX="222.0" layoutY="131.0" onAction="#logInAction" prefHeight="34.0" prefWidth="160.0" style="-fx-background-color: green;" text="LOG IN" textAlignment="JUSTIFY" textOverrun="CENTER_WORD_ELLIPSIS">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="Corbel Italic" size="13.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
